@@ -184,7 +184,6 @@ body {
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 3rem;
-    align-items: center;
 }
 
 .step {
@@ -196,6 +195,7 @@ body {
     padding: 2rem 1.75rem;
     box-shadow: var(--shadow-soft);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-content: center
 }
 
 .step:hover {
@@ -221,6 +221,17 @@ body {
     font-size: 1.75rem;
     color: var(--color-primary-light);
     flex-shrink: 0; /* prevents the arrow from getting squeezed when cards wrap */
+    align-self: center;
+}
+
+@media (max-width: 600px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg); /* → becomes ↓ */
+    }
 }
 
 /* ---------- Footer ---------- */

@@ -1,3 +1,4 @@
+import { FaArrowRight } from 'react-icons/fa';
 import Footer from '../components/footer.jsx'
 
 export default function Home({ setCurrentPage }) {
@@ -28,13 +29,14 @@ export default function Home({ setCurrentPage }) {
                     <h4>Tell Cadence what's on your plate</h4>
                     <p>Add your tasks, deadlines, and how long each one usually takes.</p> {/* gray, light text color*/}
                 </div>
-                <div className="step-arrow">→</div>
+                <div className="step-arrow"><FaArrowRight /></div>
                 <div className='step'>
                     <h4>Cadence learns your rhythm</h4>
                     <p>It picks up on when you're sharp, when you're not, and adjusts as your patterns emerge.</p>
                 </div>
-                <div className="step-arrow">→</div>
+                <div className="step-arrow"><FaArrowRight /></div>
                 <div className='step'>
+
                     <h4>Get a plan, not just a calendar</h4>
                     <p>Open Cadence and see exactly what to work on next — matched to your energy and your deadlines.</p>
                 </div>
