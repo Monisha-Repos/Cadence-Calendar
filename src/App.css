@@ -224,6 +224,7 @@ body {
     align-self: center;
 }
 
+/* rotate arrows downward for narrow screen sizes*/
 @media (max-width: 600px) {
     .steps {
         flex-direction: column;
