@@ -184,11 +184,12 @@ body {
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 3rem;
+    align-items: center;
 }
 
 .step {
     flex: 1 1 15rem;
-    text-align: left;
+    text-align: center;
     background-color: var(--color-surface);
     border: 1px solid rgba(42, 157, 143, 0.15);
     border-radius: 16px;
@@ -216,6 +217,12 @@ body {
     line-height: 1.65;
 }
 
+.step-arrow {
+    font-size: 1.75rem;
+    color: var(--color-primary-light);
+    flex-shrink: 0; /* prevents the arrow from getting squeezed when cards wrap */
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -240,11 +247,23 @@ body {
     font-weight: 500;
     margin: 0;
 }
+    
+
+    .footer-credit a {
+        color: currentColor;
+        text-decoration: underline;
+        transition: color 0.2s ease;
+    }
+
+    .footer-credit a:hover {
+        color: var(--color-accent-light);
+    }
 
 .footer-links {
     display: flex;
     gap: 1rem;
 }
+
 
 .footer-links a {
     display: inline-flex;
