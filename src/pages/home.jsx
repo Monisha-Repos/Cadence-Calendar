@@ -1,24 +1,24 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-export default function Home(setCurrentState) {
+export default function Home({ setCurrentPage }) {
 
     return <>
         <div className='hero'> {/* hero -> must cover 80% page height, remaining page appears below */}
             <h1>Cadence</h1>
             <p class='tagline'>Stop planning. Start doing.</p> {/* tagline -> accent color, widespace, extra weight*/}
-            <p>Cadence learns how you work — your energy, your deadlines, your habits — and tells you exactly what to tackle next.No more staring at a blank afternoon wondering where to start.</p>
+            <p>Cadence learns how you work — your energy, your deadlines, your habits — and tells you exactly what to tackle next. No more staring at a blank afternoon wondering where to start.</p>
             <div className='button-group'>
                 {/* must provide function call for onClick attr
                 function call is saved and run on click 
                 direct statements in attr will run immediately when page renders */ }
-                <button type='button' onClick={() => setCurrentState('sign-up')}>Create an Account</button>
-                <button type='button' onClick={() => setCurrentState('login')}>Login</button>
+                <button type='button' onClick={() => setCurrentPage('sign-up')}>Create an Account</button>
+                <button type='button' onClick={() => setCurrentPage('login')}>Login</button>
             </div>
         </div>
 
         <div className='why-cadence'>
             <h2>Why Cadence?</h2>
-            <p>Most calendar apps just store your events. Cadence goes further — it studies when you're sharp, when you're not, and what's actually due, then builds your day around it. Got a free afternoon? Cadence knows whether that's the moment for deep work or busywork, based on how you actually perform, not a generic productivity template.Less deciding what to do. More getting it done.</p>
+            <p>Most calendar apps just store your events. Cadence goes further — it studies when you're sharp, when you're not, and what's actually due, then builds your day around it. Got a free afternoon? Cadence knows whether that's the moment for deep work or busywork, based on how you actually perform, not a generic productivity template. Less deciding what to do. More getting it done.</p>
         </div>
 
         <div className='how-it-works'>
