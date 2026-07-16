@@ -130,12 +130,18 @@ body {
 
 /* ---------- Sections below the hero ---------- */
 
-.why-cadence,
-.how-it-works {
+.why-cadence {
     text-align: center;
     padding: 5rem 1.5rem;
     margin: 0 auto;
 }
+
+.how-it-works {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    margin: 0 auto;
+}
+
 
 .why-cadence h2,
 .how-it-works h2 {
@@ -208,4 +214,53 @@ body {
     color: var(--color-text-muted); /* gray, light text color */
     font-size: 0.95rem;
     line-height: 1.65;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    min-height: 20vh;
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+/* overrides the .tagline styles it inherits — quieter, sentence case */
+.footer-credit {
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: none;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    color: var(--color-surface);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent-light);
+    background-color: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Home(setCurrentState) {
 
@@ -18,7 +18,7 @@ export default function Home(setCurrentState) {
 
         <div className='why-cadence'>
             <h2>Why Cadence?</h2>
-            <p>Most calendar apps just store your events.Cadence goes further — it studies when you're sharp, when you're not, and what's actually due, then builds your day around it. Got a free afternoon? Cadence knows whether that's the moment for deep work or busywork, based on how you actually perform, not a generic productivity template.Less deciding what to do. More getting it done.</p>
+            <p>Most calendar apps just store your events. Cadence goes further — it studies when you're sharp, when you're not, and what's actually due, then builds your day around it. Got a free afternoon? Cadence knows whether that's the moment for deep work or busywork, based on how you actually perform, not a generic productivity template.Less deciding what to do. More getting it done.</p>
         </div>
 
         <div className='how-it-works'>
@@ -40,13 +40,13 @@ export default function Home(setCurrentState) {
         </div>
 
         <footer className="site-footer">
-            <p>Cadence — a project by Monisha</p>
+            <p className='tagline footer-credit'>Cadence — a project by Monisha</p>
             <div className="footer-links">
-                <a href="https://github.com/your-username/cadence" target="_blank" rel="noopener noreferrer">
-                    GitHub
+                <a href="https://github.com/Monisha-Repos/Cadence-Calendar" target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={24} />
                 </a>
                 <a href="https://www.linkedin.com/in/monisha-natarajan" target="_blank" rel="noopener noreferrer">
-                    LinkedIn
+                    <FaLinkedin size={24} />
                 </a>
             </div>
         </footer>
