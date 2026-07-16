@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FaArrowLeft } from 'react-icons/fa'
 import getRandomTagline from '../components/taglines.jsx'
 
 
@@ -16,6 +17,10 @@ export default function Login({ setCurrentPage }) {
     }
 
     return <>
+        <button type='button' className='back-home' aria-label='Back to home' onClick={() => setCurrentPage('home')}>
+            <FaArrowLeft size={18} />
+        </button>
+
         <div className='center-block'>
             <h1>Login</h1>
             <p>{tagline}</p>

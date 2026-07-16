@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FaArrowLeft } from 'react-icons/fa'
 import getRandomTagline from '../components/taglines.jsx'
 
 
@@ -17,12 +18,17 @@ export default function SignUp({ setCurrentPage }) {
     }
 
     return <>
+        <button type='button' className='back-home' aria-label='Back to home' onClick={() => setCurrentPage('home')}>
+            <FaArrowLeft size={18} />
+        </button>
+
         <div className='center-block'>
             
             {/* 📌 REVIEW LATER */}
+            <h1>Create your account</h1>
+            <p>{tagline}</p>
+
             <form onSubmit={handleSubmit}>
-                <h1>Create your account</h1>
-                <p>{tagline}</p>
 
             <label htmlFor="username">Username</label>
             <input
@@ -49,6 +55,16 @@ export default function SignUp({ setCurrentPage }) {
             />
 
             <button type="submit">Sign Up</button>
+
+            <p>
+                Already have an Account?{' '}
+                <a href="#" onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentPage('login');
+                }}>
+                    Log In!
+                </a>
+            </p>
             </form>
         </div>
     </>

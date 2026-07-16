@@ -264,3 +264,134 @@ body {
     background-color: rgba(255, 255, 255, 0.14);
     transform: translateY(-2px);
 }
+
+/* ---------- Auth pages (login / sign-up) ---------- */
+
+.center-block {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1.5rem;
+}
+
+.center-block h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    color: var(--color-primary-dark);
+    text-align: center;
+}
+
+/* the rotating motivational tagline under the heading */
+.center-block h1 + p {
+    margin-top: 0.5rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    text-align: center;
+}
+
+.center-block form {
+    width: 100%;
+    max-width: 24rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--color-surface);
+    border: 1px solid rgba(42, 157, 143, 0.15);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    padding: 2.5rem 2rem;
+}
+
+.center-block label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.4rem;
+}
+
+.center-block input {
+    font: inherit;
+    color: var(--color-text);
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 1.25rem;
+    border: 1.5px solid rgba(107, 122, 153, 0.35);
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.center-block input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.18);
+}
+
+.center-block button[type='submit'] {
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.center-block button[type='submit']:hover {
+    background-color: #D65F41;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+}
+
+.center-block button[type='submit']:active {
+    transform: translateY(0);
+}
+
+/* "Don't have an account?" line */
+.center-block form p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.center-block form a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.center-block form a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Back-to-home icon button ---------- */
+
+.back-home {
+    position: fixed;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-surface);
+    color: var(--color-primary-dark);
+    border: 1px solid rgba(42, 157, 143, 0.25);
+    box-shadow: var(--shadow-soft);
+    transition: color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.back-home:hover {
+    color: var(--color-accent);
+    box-shadow: var(--shadow-lift);
+    transform: translateX(-2px);
+}

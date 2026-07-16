@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Footer from '../components/footer.jsx'
 
 export default function Home({ setCurrentPage }) {
 
@@ -39,17 +39,7 @@ export default function Home({ setCurrentPage }) {
             </div>
         </div>
 
-        <footer className="site-footer">
-            <p className='tagline footer-credit'>Cadence — a project by Monisha</p>
-            <div className="footer-links">
-                <a href="https://github.com/Monisha-Repos/Cadence-Calendar" target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={24} />
-                </a>
-                <a href="https://www.linkedin.com/in/monisha-natarajan" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size={24} />
-                </a>
-            </div>
-        </footer>
+        <Footer />
 
                 
     </>
