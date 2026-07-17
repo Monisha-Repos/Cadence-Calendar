@@ -41,7 +41,7 @@ export default function Login({ setCurrentPage }) {
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <button type="submit">Log In</button>
+                <button type="submit" onClick={ () => setCurrentPage('calendar') }>Log In</button>
 
                 {/* 📌 REVIEW LATER */}
                 <p>

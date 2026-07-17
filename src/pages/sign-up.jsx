@@ -54,7 +54,7 @@ export default function SignUp({ setCurrentPage }) {
                 onChange={(e) => setConfirmPassword(e.target.value)}
             />
 
-            <button type="submit">Sign Up</button>
+                <button type="submit" onClick={() => setCurrentPage('calendar')}>Sign Up</button>
 
             <p>
                 Already have an Account?{' '}

@@ -15,7 +15,7 @@ function App() {
           {currentPage == 'login' && <Login setCurrentPage={setCurrentPage} />}
           {currentPage == 'sign-up' && <SignUp setCurrentPage={setCurrentPage} />}
           {currentPage == 'calendar' && <Calendar setCurrentPage={setCurrentPage} />}
-    </>
+      </>
   )
 }
 

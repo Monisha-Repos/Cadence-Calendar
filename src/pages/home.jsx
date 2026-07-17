@@ -6,7 +6,7 @@ export default function Home({ setCurrentPage }) {
     return <>
         <div className='hero'> {/* hero -> must cover 80% page height, remaining page appears below */}
             <h1>Cadence</h1>
-            <p class='tagline'>Stop planning. Start doing.</p> {/* tagline -> accent color, widespace, extra weight*/}
+            <p className='tagline'>Stop planning. Start doing.</p> {/* tagline -> accent color, widespace, extra weight*/}
             <p>Cadence learns how you work — your energy, your deadlines, your habits — and tells you exactly what to tackle next. No more staring at a blank afternoon wondering where to start.</p>
             <div className='button-group'>
                 {/* must provide function call for onClick attr
