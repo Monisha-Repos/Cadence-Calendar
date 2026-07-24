@@ -1,0 +1,34 @@
+/* ============================================================
+   theme.css — design tokens + fonts (the reusable design system)
+
+   This is the portable heart of the styling. Copy this file into
+   any project to carry the Cadence look. Every component
+   stylesheet depends ONLY on the CSS variables defined here, so
+   swapping these values re-themes the whole app.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    /* ----- brand ----- */
+    --color-primary: #2A9D8F;        /* Dark Aquamarine */
+    --color-primary-light: #6FC3B8;  /* Cyan */
+    --color-primary-dark: #1D6E64;   /* Deep Sea */
+    --color-accent: #E76F51;         /* Bright Copper Red */
+    --color-accent-light: #F4A261;   /* Sandy Copper — readable on dark teal */
+    --color-accent-dark: #D65F41;    /* Copper — hover / pressed state */
+
+    /* ----- text + surfaces ----- */
+    --color-text: #2C3E60;           /* Midnight Blue */
+    --color-text-muted: #6B7A99;     /* Dusk Blue */
+    --color-bg: #F4FBFB;             /* Mint Cream */
+    --color-surface: #FFFFFF;        /* Pure White */
+
+    /* ----- elevation ----- */
+    --shadow-soft: 0 4px 20px rgba(29, 110, 100, 0.10);
+    --shadow-lift: 0 12px 32px rgba(29, 110, 100, 0.16);
+
+    /* ----- type ----- */
+    --font-heading: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+}

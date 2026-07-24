@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaArrowLeft } from 'react-icons/fa'
 import getRandomTagline from '../components/taglines.jsx'
+import '../styles/auth.css'
 
 
 export default function SignUp({ setCurrentPage }) {

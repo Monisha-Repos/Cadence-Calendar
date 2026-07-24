@@ -1,5 +1,6 @@
 import { FaArrowRight } from 'react-icons/fa';
 import Footer from '../components/footer.jsx'
+import '../styles/home.css'
 
 export default function Home({ setCurrentPage }) {
 

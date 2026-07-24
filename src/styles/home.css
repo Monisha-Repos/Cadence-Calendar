@@ -1,0 +1,201 @@
+/* ============================================================
+   home.css — landing/home page: hero, buttons, "Why Cadence",
+   "How it works" steps. Pairs with home.jsx.
+   Requires the tokens from styles/theme.css.
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+
+.hero {
+    min-height: 80vh; /* covers 80% of viewport, rest of page scrolls below */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 65%, var(--color-primary-light) 130%);
+    color: var(--color-surface);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.tagline {
+    color: var(--color-accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin: 1rem 0 1.75rem;
+}
+
+.hero > p:not(.tagline) {
+    max-width: 36rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+/* ---------- Buttons ---------- */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.button-group button {
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.button-group button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+}
+
+.button-group button:active {
+    transform: translateY(0);
+}
+
+/* primary call to action — filled accent */
+.button-group button:first-child {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.button-group button:first-child:hover {
+    background-color: var(--color-accent-dark);
+}
+
+/* secondary — ghost outline on the teal hero */
+.button-group button:last-child {
+    background-color: transparent;
+    color: var(--color-surface);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.button-group button:last-child:hover {
+    background-color: var(--color-surface);
+    color: var(--color-primary-dark);
+    border-color: var(--color-surface);
+}
+
+/* ---------- Sections below the hero ---------- */
+
+.why-cadence {
+    text-align: center;
+    padding: 5rem 1.5rem;
+    margin: 0 auto;
+}
+
+.how-it-works {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    margin: 0 auto;
+}
+
+
+.why-cadence h2,
+.how-it-works h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--color-primary-dark);
+}
+
+/* small accent underline beneath each section heading */
+.why-cadence h2::after,
+.how-it-works h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-accent);
+    margin: 1rem auto 0;
+}
+
+.why-cadence {
+    max-width: 46rem;
+}
+
+.why-cadence p {
+    margin-top: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+}
+
+.how-it-works {
+    max-width: 68rem;
+    padding-bottom: 6rem;
+}
+
+/* ---------- Steps ---------- */
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.step {
+    flex: 1 1 15rem;
+    text-align: center;
+    background-color: var(--color-surface);
+    border: 1px solid rgba(42, 157, 143, 0.15);
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-content: center
+}
+
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+}
+
+.step h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.step p {
+    color: var(--color-text-muted); /* gray, light text color */
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.step-arrow {
+    font-size: 1.75rem;
+    color: var(--color-primary-light);
+    flex-shrink: 0; /* prevents the arrow from getting squeezed when cards wrap */
+    align-self: center;
+}
+
+/* rotate arrows downward for narrow screen sizes*/
+@media (max-width: 600px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg); /* → becomes ↓ */
+    }
+}

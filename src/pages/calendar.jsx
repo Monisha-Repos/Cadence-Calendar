@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight, FaLightbulb, FaCalendarCheck, FaPenFancy, FaPaperPlane, FaSignOutAlt } from 'react-icons/fa'
+import '../styles/calendar.css'
 
 const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',

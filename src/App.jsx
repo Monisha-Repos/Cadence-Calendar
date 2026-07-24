@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './styles/base.css' // global reset + typography + design tokens
 import Home from './pages/home'
 import Login from './pages/login'
 import SignUp from './pages/sign-up'
